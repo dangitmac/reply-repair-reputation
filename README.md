@@ -160,9 +160,13 @@ F1-score balances **precision and recall**, making it more appropriate for evalu
 
 ### Time of Prediction
 
-The prediction is made **immediately after a 1-star review is posted**. Therefore, I will only use information that would be available at that time, such as characteristics of the review and its timestamp.
+The model uses only information that is available when the 1-star review is posted, such as characteristics of the review and its timestamp.
 
-I will not use the next customer rating, the time of the next review, or any other information that occurs after the prediction time, because doing so would introduce **data leakage**.
+For this project, evaluation is performed retrospectively on the subset of 1-star reviews for which a later customer review is observed, because `responded_before_next` requires a subsequent review in order to define the outcome.
+
+Therefore, this model should be interpreted as a **conditional retrospective prediction model** rather than as a fully deployable real-time system for every newly posted 1-star review.
+
+I do not use the next customer rating, the time of the next review, or any other future information as model features.
 
 ## Baseline Model
 
