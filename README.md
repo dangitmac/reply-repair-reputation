@@ -28,6 +28,23 @@ The main columns relevant to this analysis are:
 
 ## Data Cleaning and Exploratory Data Analysis
 
+### Data Cleaning
+
+Before analyzing the reviews, I cleaned and reorganized the data so that each 1-star review could be connected to what happened immediately afterward.
+
+I performed the following cleaning steps:
+
+- Converted the review timestamps from Unix timestamps into readable datetime values.
+- Extracted the timestamp of each business response from the `resp` column.
+- Created an indicator showing whether a business responded to a review.
+- Treated missing review text as having a text length of 0.
+- Sorted reviews chronologically within each business using `gmap_id` and review time.
+- Used the chronological ordering to identify the rating and time of the next customer review for each business.
+- Created `responded_before_next`, which indicates whether the business responded to the 1-star review before the next customer review was posted.
+- Restricted the main analysis to 1-star reviews that actually had a subsequent customer review.
+
+These steps were important because simply knowing that a business eventually responded is not enough for my research question. The response had to occur **before** the next customer review in order to compare what happened next for businesses that responded versus those that did not.
+
 ## Assessment of Missingness
 
 ## Hypothesis Testing
