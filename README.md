@@ -224,7 +224,7 @@ The best-performing combination was:
 - **`C = 0.1`**
 - **`class_weight = 'balanced'`**
 
-The best cross-validation F1-score was approximately **0.120**.
+The best cross-validation F1-score was approximately **0.123**.
 
 ### Final Model Performance
 
