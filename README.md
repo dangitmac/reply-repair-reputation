@@ -126,6 +126,22 @@ Reviews without pictures had a much higher rate of missing written text than rev
 
 ## Hypothesis Testing
 
+I tested whether businesses that respond to a 1-star review before the next customer review tend to receive a higher rating on that next review.
+
+**Null Hypothesis:** Among 1-star reviews that have a subsequent review, the mean rating of the next review is the same whether or not the business responds before that next review. Any observed difference is due to random chance.
+
+**Alternative Hypothesis:** Among 1-star reviews that have a subsequent review, the mean rating of the next review is higher when the business responds before that next review.
+
+**Test Statistic:** Mean next rating for the responded-before-next group minus mean next rating for the no-response-before-next group.
+
+I used a **one-sided permutation test** with a significance level of **0.05**. A one-sided test is appropriate because my research question specifically asks whether responding is associated with a **higher** subsequent rating.
+
+The observed difference in mean next rating was approximately **0.095 stars**, with the responded-before-next group having the higher mean. None of the 1000 permutations produced a difference at least this large, giving an empirical p-value of **less than 0.001**.
+
+At a significance level of **0.05**, I reject the null hypothesis. The results provide strong evidence that, among 1-star reviews with a subsequent review, businesses that respond before the next review tend to have a higher mean next rating than businesses that do not respond before the next review.
+
+Because this is observational data, this result shows an **association** and does not establish that the business response caused the higher subsequent rating.
+
 ## Framing a Prediction Problem
 
 ## Baseline Model
