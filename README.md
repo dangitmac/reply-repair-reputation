@@ -90,6 +90,20 @@ I believe the missingness in the `text` column could be **MNAR (Missing Not At R
 
 For example, some users may leave only a star rating when they do not have much additional feedback to provide. Additional information about why each reviewer chose to leave the text field blank, or about their general tendency to write detailed reviews, could help explain the missingness. If that information were observed and accounted for, the missingness could potentially be considered MAR instead of MNAR.
 
+### Missingness Dependency: Rating
+
+To test whether missingness in the `text` column depends on the review's star rating, I performed a permutation test.
+
+**Null Hypothesis:** The missingness of `text` does not depend on the review's star rating. Any difference in average rating between reviews with and without text is due to random chance.
+
+**Alternative Hypothesis:** The missingness of `text` does depend on the review's star rating.
+
+I used the **absolute difference in mean rating** between reviews with missing text and reviews with non-missing text as the test statistic.
+
+The observed difference was approximately **0.0228 stars**. None of the 500 permutations produced a difference at least this large, corresponding to an empirical p-value of **less than 0.002**.
+
+At a significance level of **0.05**, I reject the null hypothesis. There is evidence that whether review text is missing is associated with the review's star rating.
+
 ## Hypothesis Testing
 
 ## Framing a Prediction Problem
