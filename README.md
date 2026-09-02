@@ -10,6 +10,16 @@ This project explores whether responding to a 1-star Google review is associated
 
 The Hawaii Google Maps Reviews dataset contains **1,504,347 customer reviews** from **21,507 businesses**. It includes customer star ratings, written reviews, timestamps, and business responses. These features make it possible to study how businesses react to extremely negative feedback and what happens immediately afterward.
 
+### Data Source
+
+This project uses the Hawaii subset of the McAuley Lab Google Local Data (2021), including the Hawaii 10-core review data and accompanying Hawaii business metadata. The dataset contains **1,504,347 reviews** and metadata for **21,507 businesses**.
+
+### References
+
+Li, J., Shang, J., & McAuley, J. (2022). *UCTopic: Unsupervised Contrastive Learning for Phrase Representations and Topic Mining.* ACL.
+
+Yan, A., He, Z., Li, J., Zhang, T., & McAuley, J. (2023). *Personalized Showcases: Generating Multi-Modal Explanations for Recommendations.* SIGIR.
+
 My project focuses on the following question:
 
 **After a 1-star Google review, is a business's next customer review rated higher when the business responds before that next review than when it does not?**
