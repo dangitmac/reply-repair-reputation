@@ -45,6 +45,20 @@ I performed the following cleaning steps:
 
 These steps were important because simply knowing that a business eventually responded is not enough for my research question. The response had to occur **before** the next customer review in order to compare what happened next for businesses that responded versus those that did not.
 
+### Cleaned Data Preview
+
+Below are the first five rows of the cleaned dataset used for the main analysis.
+
+| gmap_id | rating | review_datetime | text_length | next_rating | response_group |
+|:---|---:|:---|---:|---:|:---|
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2017-05-03 19:46:01.266000 | 145 | 5 | No response before next review |
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2018-05-17 02:19:44.124000 | 0 | 1 | Responded before next review |
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2018-06-11 23:31:36.087000 | 38 | 1 | No response before next review |
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2018-06-12 01:45:24.827000 | 128 | 1 | Responded before next review |
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2019-03-24 02:15:12.444000 | 236 | 5 | No response before next review |
+
+The cleaned table links each 1-star review to the next customer rating and indicates whether the business responded before that next review occurred.
+
 ## Assessment of Missingness
 
 ## Hypothesis Testing
