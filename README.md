@@ -144,6 +144,26 @@ Because this is observational data, this result shows an **association** and doe
 
 ## Framing a Prediction Problem
 
+### Prediction Problem
+
+I will predict whether a business will respond to a 1-star review before the next customer review is posted.
+
+This is a **binary classification** problem. The response variable is `responded_before_next`, where `True` means the business responded before the next review and `False` means it did not.
+
+I chose this response variable because predicting whether a negative review will receive a timely business response could help identify which reviews are most likely to receive service recovery attention.
+
+### Evaluation Metric
+
+I will evaluate the model using the **F1-score**. The responded-before-next group makes up only about **6%** of the observations, so the classes are highly imbalanced. Accuracy could therefore be misleading because a model could achieve high accuracy simply by predicting the majority class most of the time.
+
+F1-score balances **precision and recall**, making it more appropriate for evaluating how well the model identifies the relatively uncommon reviews that actually receive a response.
+
+### Time of Prediction
+
+The prediction is made **immediately after a 1-star review is posted**. Therefore, I will only use information that would be available at that time, such as characteristics of the review and its timestamp.
+
+I will not use the next customer rating, the time of the next review, or any other information that occurs after the prediction time, because doing so would introduce **data leakage**.
+
 ## Baseline Model
 
 ## Final Model
