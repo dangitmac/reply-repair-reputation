@@ -45,7 +45,8 @@ Before analyzing the reviews, I cleaned and reorganized the data so that each 1-
 
 I performed the following cleaning steps:
 
-- Converted the review timestamps from Unix timestamps into readable datetime values.
+- Converted the review timestamps from Unix timestamps into readable datetime values and converted them from UTC to Pacific/Honolulu local time.
+- Used Hawaii local time when deriving time-of-day and weekend features so that those variables correspond to the business's local operating context.
 - Extracted the timestamp of each business response from the `resp` column.
 - Created an indicator showing whether a business responded to a review.
 - Treated missing review text as having a text length of 0.
