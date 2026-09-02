@@ -1,6 +1,6 @@
 # Can a Reply Repair a Reputation?
 
-## Service Recovery in Hawaii Google Reviews
+## Service Recovery in Hawaii Google Reviews 🌴 🌺 🌊
 
 **Mac Dang**
 
