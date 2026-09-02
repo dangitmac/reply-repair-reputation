@@ -58,15 +58,15 @@ These steps were important because simply knowing that a business eventually res
 
 ### Cleaned Data Preview
 
-Below are the first five rows of the cleaned dataset used for the main analysis.
+Below are the first five rows of the cleaned dataset used for the main analysis. Review timestamps are shown in Pacific/Honolulu local time.
 
 | gmap_id | rating | review_datetime | text_length | next_rating | response_group |
 |:---|---:|:---|---:|---:|:---|
-| 0x0:0x9edcb14b0cf1ec04 | 1 | 2017-05-03 19:46:01.266000 | 145 | 5 | No response before next review |
-| 0x0:0x9edcb14b0cf1ec04 | 1 | 2018-05-17 02:19:44.124000 | 0 | 1 | Responded before next review |
-| 0x0:0x9edcb14b0cf1ec04 | 1 | 2018-06-11 23:31:36.087000 | 38 | 1 | No response before next review |
-| 0x0:0x9edcb14b0cf1ec04 | 1 | 2018-06-12 01:45:24.827000 | 128 | 1 | Responded before next review |
-| 0x0:0x9edcb14b0cf1ec04 | 1 | 2019-03-24 02:15:12.444000 | 236 | 5 | No response before next review |
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2017-05-03 09:46:01.266000-10:00 | 145 | 5 | No response before next review |
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2018-05-16 16:19:44.124000-10:00 | 0 | 1 | Responded before next review |
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2018-06-11 13:31:36.087000-10:00 | 38 | 1 | No response before next review |
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2018-06-11 15:45:24.827000-10:00 | 128 | 1 | Responded before next review |
+| 0x0:0x9edcb14b0cf1ec04 | 1 | 2019-03-23 16:15:12.444000-10:00 | 236 | 5 | No response before next review |
 
 The cleaned table links each 1-star review to the next customer rating and indicates whether the business responded before that next review occurred.
 
