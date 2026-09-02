@@ -166,6 +166,23 @@ I will not use the next customer rating, the time of the next review, or any oth
 
 ## Baseline Model
 
+### Baseline Model Features
+
+For my baseline model, I used two features that are available immediately after the 1-star review is posted:
+
+- **Review text length:** a **quantitative** feature created from `text`. Missing review text was treated as having a length of 0, and this feature was standardized before modeling.
+- **Whether the review contains pictures:** a **binary nominal** feature created from `pics`, where the feature indicates whether pictures were included with the review.
+
+I used a **logistic regression classifier** because the response variable is binary. All feature transformations and model training were performed together in a single `sklearn` Pipeline.
+
+### Baseline Model Performance
+
+The baseline model achieved an **F1-score of 0.000 on the training set and 0.000 on the unseen test set**.
+
+Although the response rate was about 6%, the model predicted **zero observations** as belonging to the positive class. As a result, it completely failed to identify reviews that received a business response before the next review.
+
+I do not consider this baseline model effective. Its performance shows that the two baseline features alone are not enough to identify the minority response class, so the final model will address the class imbalance and incorporate additional relevant features.
+
 ## Final Model
 
 ## Fairness Analysis
