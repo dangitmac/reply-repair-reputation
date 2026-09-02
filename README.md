@@ -71,6 +71,17 @@ Businesses that responded before the next review had a slightly more positive su
 
 <iframe src="{{ '/assets/response-vs-next-rating.html' | relative_url }}" width="900" height="550" frameborder="0"></iframe>
 
+### Interesting Aggregates
+
+Grouping the 1-star reviews by whether the business responded before the next review gives the following summary:
+
+| response_group | number_of_reviews | mean_next_rating | median_next_rating |
+|:---|---:|---:|---:|
+| No response before next review | 30199 | 4.10 | 4 |
+| Responded before next review | 1946 | 4.20 | 5 |
+
+The responded-before-next group had a slightly higher **mean next rating of 4.20 compared with 4.10** for the no-response group. Its median next rating was also higher, at **5 stars compared with 4 stars**. This supports the pattern seen in the bivariate plot, although the two groups are very different in size.
+
 ## Assessment of Missingness
 
 ## Hypothesis Testing
