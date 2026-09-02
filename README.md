@@ -59,6 +59,17 @@ Below are the first five rows of the cleaned dataset used for the main analysis.
 
 The cleaned table links each 1-star review to the next customer rating and indicates whether the business responded before that next review occurred.
 
+### Univariate Analysis
+
+The distribution of subsequent ratings is concentrated toward the positive end of the scale. In particular, 5-star reviews make up the largest share of next reviews following a 1-star review, showing that one extremely negative review does not necessarily mean the next customer will also report a poor experience.
+
+<iframe
+src="assets/next-rating-distribution.html"
+width="800"
+height="600"
+frameborder="0"
+></iframe>
+
 ## Assessment of Missingness
 
 ## Hypothesis Testing
