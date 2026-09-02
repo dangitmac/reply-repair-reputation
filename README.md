@@ -241,7 +241,7 @@ I used a significance level of **0.05**.
 
 ### Fairness Analysis Results
 
-The final model had an F1-score of **0.000** for reviews with no written text and approximately **0.143** for reviews with written text, giving an observed difference of approximately **0.143**.
+The final model had an F1-score of **0.000** for reviews with no written text and approximately **0.139** for reviews with written text, giving an observed difference of approximately **0.139**.
 
 Using 1000 permutations, the permutation test produced a p-value of approximately **0.001**.
 
