@@ -84,6 +84,12 @@ The responded-before-next group had a slightly higher **mean next rating of 4.20
 
 ## Assessment of Missingness
 
+### MNAR Analysis
+
+I believe the missingness in the `text` column could be **MNAR (Missing Not At Random)**. Whether a reviewer chooses to write text may depend on information that is not fully observed in the dataset, such as how strongly they felt about their experience or whether they felt a written explanation was necessary.
+
+For example, some users may leave only a star rating when they do not have much additional feedback to provide. Additional information about why each reviewer chose to leave the text field blank, or about their general tendency to write detailed reviews, could help explain the missingness. If that information were observed and accounted for, the missingness could potentially be considered MAR instead of MNAR.
+
 ## Hypothesis Testing
 
 ## Framing a Prediction Problem
