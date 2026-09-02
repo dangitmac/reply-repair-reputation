@@ -114,7 +114,7 @@ I also tested whether the missingness of `text` depends on whether a review was 
 
 I used the **absolute difference in the proportion of missing text** between weekend and weekday reviews as the test statistic.
 
-The observed difference in missing-text rates was approximately **0.016**, or **1.6 percentage points**. The permutation test produced a p-value of **0.138**.
+The observed difference in missing-text rates was approximately **0.016, or 1.6 percentage points**. The permutation test produced a **p-value of approximately 0.160**.
 
 At a significance level of **0.05**, I fail to reject the null hypothesis. There is not sufficient evidence that the missingness of `text` depends on whether a review was posted on a weekend or weekday.
 
