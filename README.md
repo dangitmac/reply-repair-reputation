@@ -125,7 +125,7 @@ I also tested whether the missingness of `text` depends on whether a review was 
 
 I used the **absolute difference in the proportion of missing text** between weekend and weekday reviews as the test statistic.
 
-The observed difference in missing-text rates was approximately **0.016, or 1.6 percentage points**. The permutation test produced a **p-value of approximately 0.160**.
+The observed difference in missing-text rates was approximately **0.020, or 2.0 percentage points**. The permutation test produced a **p-value of approximately 0.078**.
 
 At a significance level of **0.05**, I fail to reject the null hypothesis. There is not sufficient evidence that the missingness of `text` depends on whether a review was posted on a weekend or weekday.
 
@@ -220,14 +220,14 @@ I tuned:
 
 The best-performing combination was:
 
-- **`C = 10`**
+- **`C = 0.1`**
 - **`class_weight = 'balanced'`**
 
 The best cross-validation F1-score was approximately **0.120**.
 
 ### Final Model Performance
 
-The final model achieved an **F1-score of approximately 0.124 on the training set and 0.138 on the unseen test set**.
+The final model achieved an **F1-score of approximately 0.125 on the training set and 0.134 on the unseen test set**.
 
 This improved substantially over the baseline model's test F1-score of **0.000**, which occurred because the baseline predicted no observations as belonging to the positive class.
 
