@@ -65,6 +65,12 @@ The distribution of subsequent ratings is concentrated toward the positive end o
 
 <iframe src="{{ '/assets/next-rating-distribution.html' | relative_url }}" width="800" height="600" frameborder="0"></iframe>
 
+### Bivariate Analysis
+
+Businesses that responded before the next review had a slightly more positive subsequent rating distribution. In particular, about **56%** of the next reviews were 5 stars for the responded group, compared with about **50%** for the no-response group. This suggests a small positive association between responding to a 1-star review and the rating of the following review.
+
+<iframe src="{{ '/assets/response-vs-next-rating.html' | relative_url }}" width="900" height="550" frameborder="0"></iframe>
+
 ## Assessment of Missingness
 
 ## Hypothesis Testing
