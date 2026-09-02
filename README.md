@@ -118,6 +118,12 @@ The observed difference in missing-text rates was approximately **0.016**, or **
 
 At a significance level of **0.05**, I fail to reject the null hypothesis. There is not sufficient evidence that the missingness of `text` depends on whether a review was posted on a weekend or weekday.
 
+### Missingness Visualization
+
+Reviews without pictures had a much higher rate of missing written text than reviews with pictures. This suggests that the presence of pictures is strongly associated with whether a reviewer also provides written feedback.
+
+<iframe src="{{ '/assets/missingness-pictures.html' | relative_url }}" width="800" height="600" frameborder="0"></iframe>
+
 ## Hypothesis Testing
 
 ## Framing a Prediction Problem
