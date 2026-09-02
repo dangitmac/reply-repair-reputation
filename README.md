@@ -5,6 +5,8 @@
 
 **Mac Dang**
 
+## https://dangitmac.github.io/reply-repair-reputation/
+
 This project explores whether responding to a 1-star Google review is associated with what happens next for a business, and was made for UCSD's DSC 80's final course project in Summer Session '26.
 
 ## Introduction
