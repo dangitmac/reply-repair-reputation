@@ -90,19 +90,19 @@ I believe the missingness in the `text` column could be **MNAR (Missing Not At R
 
 For example, some users may leave only a star rating when they do not have much additional feedback to provide. Additional information about why each reviewer chose to leave the text field blank, or about their general tendency to write detailed reviews, could help explain the missingness. If that information were observed and accounted for, the missingness could potentially be considered MAR instead of MNAR.
 
-### Missingness Dependency: Rating
+### Missingness Dependency: Pictures
 
-To test whether missingness in the `text` column depends on the review's star rating, I performed a permutation test.
+To test whether missingness in the `text` column depends on whether a review contains pictures, I performed a permutation test.
 
-**Null Hypothesis:** The missingness of `text` does not depend on the review's star rating. Any difference in average rating between reviews with and without text is due to random chance.
+**Null Hypothesis:** The missingness of `text` does not depend on whether the review contains pictures. Any difference in missing-text rates between reviews with and without pictures is due to random chance.
 
-**Alternative Hypothesis:** The missingness of `text` does depend on the review's star rating.
+**Alternative Hypothesis:** The missingness of `text` does depend on whether the review contains pictures.
 
-I used the **absolute difference in mean rating** between reviews with missing text and reviews with non-missing text as the test statistic.
+I used the **absolute difference in the proportion of missing text** between reviews with pictures and reviews without pictures as the test statistic.
 
-The observed difference was approximately **0.0228 stars**. None of the 500 permutations produced a difference at least this large, corresponding to an empirical p-value of **less than 0.002**.
+The observed difference was approximately **0.362, or 36.2 percentage points**. The permutation test produced a very small p-value, providing strong evidence against the null hypothesis.
 
-At a significance level of **0.05**, I reject the null hypothesis. There is evidence that whether review text is missing is associated with the review's star rating.
+At a significance level of **0.05, I reject the null hypothesis**. There is evidence that whether review text is missing is associated with whether the review contains pictures. Reviews without pictures were substantially more likely to have missing written text.
 
 ### Missingness Dependency: Weekend Status
 
