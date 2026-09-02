@@ -185,4 +185,37 @@ I do not consider this baseline model effective. Its performance shows that the 
 
 ## Final Model
 
+### Final Model Improvements
+
+My baseline model used review text length and whether the review contained pictures. For the final model, I kept those features and added two new features based on when the review was posted:
+
+- **Hour of day:** a quantitative feature derived from the review timestamp. Businesses may be more likely to notice and respond to reviews posted during hours when staff are actively monitoring their online presence.
+- **Weekend status:** a binary nominal feature indicating whether the review was posted on Saturday or Sunday. Response behavior may differ on weekends because staffing and business operations can differ from weekdays.
+
+I continued using **logistic regression**, but addressed the strong class imbalance by tuning the model's class weighting.
+
+### Hyperparameter Tuning
+
+I used **GridSearchCV with 5-fold cross-validation** and F1-score as the scoring metric.
+
+I tuned:
+
+- **`C`**, the logistic regression regularization parameter, using values `0.01`, `0.1`, `1`, and `10`.
+- **`class_weight`**, comparing no class weighting with `balanced`.
+
+The best-performing combination was:
+
+- **`C = 10`**
+- **`class_weight = 'balanced'`**
+
+The best cross-validation F1-score was approximately **0.120**.
+
+### Final Model Performance
+
+The final model achieved an **F1-score of approximately 0.124 on the training set and 0.138 on the unseen test set**.
+
+This improved substantially over the baseline model's test F1-score of **0.000**, which occurred because the baseline predicted no observations as belonging to the positive class.
+
+The final model is still limited by the difficulty of predicting a relatively rare response event, but it is more useful than the baseline because it is able to identify some reviews that receive a business response. The similar training and testing F1-scores also suggest that the model is not severely overfitting.
+
 ## Fairness Analysis
