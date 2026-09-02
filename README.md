@@ -100,9 +100,9 @@ To test whether missingness in the `text` column depends on whether a review con
 
 I used the **absolute difference in the proportion of missing text** between reviews with pictures and reviews without pictures as the test statistic.
 
-The observed difference was approximately **0.362, or 36.2 percentage points**. The permutation test produced a very small p-value, providing strong evidence against the null hypothesis.
+The observed difference was approximately **0.362, or 36.2 percentage points**. The permutation test produced a **p-value of approximately 0.002**.
 
-At a significance level of **0.05, I reject the null hypothesis**. There is evidence that whether review text is missing is associated with whether the review contains pictures. Reviews without pictures were substantially more likely to have missing written text.
+At a significance level of **0.05, I reject the null hypothesis**. There is strong evidence that the missingness of `text` depends on whether a review contains pictures. Reviews without pictures were substantially more likely to have missing written text.
 
 ### Missingness Dependency: Weekend Status
 
