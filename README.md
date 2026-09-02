@@ -104,6 +104,20 @@ The observed difference was approximately **0.0228 stars**. None of the 500 perm
 
 At a significance level of **0.05**, I reject the null hypothesis. There is evidence that whether review text is missing is associated with the review's star rating.
 
+### Missingness Dependency: Weekend Status
+
+I also tested whether the missingness of `text` depends on whether a review was posted on a weekend or a weekday.
+
+**Null Hypothesis:** The missingness of `text` does not depend on whether the review was posted on a weekend or weekday. Any observed difference in missing-text rates is due to random chance.
+
+**Alternative Hypothesis:** The missingness of `text` does depend on whether the review was posted on a weekend or weekday.
+
+I used the **absolute difference in the proportion of missing text** between weekend and weekday reviews as the test statistic.
+
+The observed difference in missing-text rates was approximately **0.016**, or **1.6 percentage points**. The permutation test produced a p-value of **0.138**.
+
+At a significance level of **0.05**, I fail to reject the null hypothesis. There is not sufficient evidence that the missingness of `text` depends on whether a review was posted on a weekend or weekday.
+
 ## Hypothesis Testing
 
 ## Framing a Prediction Problem
