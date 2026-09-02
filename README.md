@@ -219,3 +219,32 @@ This improved substantially over the baseline model's test F1-score of **0.000**
 The final model is still limited by the difficulty of predicting a relatively rare response event, but it is more useful than the baseline because it is able to identify some reviews that receive a business response. The similar training and testing F1-scores also suggest that the model is not severely overfitting.
 
 ## Fairness Analysis
+
+### Fairness Question
+
+I examined whether my final model performs differently for reviews with written feedback compared with reviews that contain no written text.
+
+- **Group X:** Reviews with no written text.
+- **Group Y:** Reviews with written text.
+
+I used **F1-score** as the evaluation metric because it is the same metric used to evaluate my prediction model and is appropriate for the strongly imbalanced response variable.
+
+### Hypotheses
+
+**Null Hypothesis:** The final model performs equally well for reviews with and without written text. Any observed difference in F1-score between the two groups is due to random chance.
+
+**Alternative Hypothesis:** The final model has a lower F1-score for reviews with no written text than for reviews with written text.
+
+**Test Statistic:** F1-score for reviews with written text minus F1-score for reviews with no written text.
+
+I used a significance level of **0.05**.
+
+### Fairness Analysis Results
+
+The final model had an F1-score of **0.000** for reviews with no written text and approximately **0.143** for reviews with written text, giving an observed difference of approximately **0.143**.
+
+Using 1000 permutations, the permutation test produced a p-value of approximately **0.001**.
+
+At a significance level of **0.05**, I reject the null hypothesis. The results provide strong evidence that the model performs worse for reviews with no written text than for reviews that contain written feedback.
+
+This indicates a meaningful performance disparity between the two groups. One possible explanation is that review text length is one of the model's features, so reviews without written feedback provide the model with less information for identifying whether a business will respond.
